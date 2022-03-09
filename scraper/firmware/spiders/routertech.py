@@ -19,7 +19,7 @@ class RouterTechSpider(Spider):
         self.logger.debug(sid)
         return FormRequest(
                     url=self.start_urls[0],
-                    formdata={'username': 'yuruotong', 'password': 'Yuruotong1', 'redirect':'./ucp.php?mode=login', 'sid': sid, 'redirect':"index.php", "login":"Login"},
+                    formdata={'username': '', 'password': '', 'redirect':'./ucp.php?mode=login', 'sid': sid, 'redirect':"index.php", "login":"Login"},
                     callback=self.after_login)
 
 
