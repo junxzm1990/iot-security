@@ -100,7 +100,7 @@ The kernel analyzer takes ELF format Linux kernel as input to check the Linux ke
 
 #### Usage:
 
-The ```kernel_example``` folder contains a raw format Linux kernel its corresponding recovered ELF format Linux kernel. To check the mitigations, run the example with following:
+The ```kernel_example``` folder contains a raw format Linux kernel with its corresponding recovered ELF format Linux kernel. To check the mitigations, run the example with following:
 
 ```bash kernel_analyzer.sh -f kernel_example/elf_kernel```
 
