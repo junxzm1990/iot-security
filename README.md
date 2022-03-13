@@ -38,7 +38,7 @@ The ```./metadata``` folder contains the meta data of firmware images used in th
 - [mercury](mercurycom.com.cn):   ```/metadata/mercury.json```
 - [mikrotik](mikrotik.com):   ```/metadata/mikrotik.json```
 - [netcore](netcoretec.com):    ```/metadata/netcore.json```
-- [netgear](netgear.com):    ```/metadata/netgear.json`
+- [netgear](netgear.com):    ```/metadata/netgear.json```
 - [openwrt](downloads.openwrt.org):   ```/metadata/openwrt.json```
 - [router-tech](routertech.org):  ```/metadata/routertech.json```
 - [supermirco](supermicro.com):  ```/metadata/supermirco.json```
