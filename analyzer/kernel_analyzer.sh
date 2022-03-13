@@ -1,7 +1,7 @@
-while getopts p: flag
+while getopts f: flag
 do
 	case "$flag" in 
-		p)
+		f)
 		  FILE=${OPTARG};;
 	esac
 done

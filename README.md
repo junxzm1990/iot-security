@@ -38,7 +38,7 @@ The ```./metadata``` folder contains the meta data of firmware images used in th
 - [mercury](mercurycom.com.cn):   ```/metadata/mercury.json```
 - [mikrotik](mikrotik.com):   ```/metadata/mikrotik.json```
 - [netcore](netcoretec.com):    ```/metadata/netcore.json```
-- [netgear](netgear.com):    ```/metadata/netgear.json```
+- [netgear](netgear.com):    ```/metadata/netgear.json`
 - [openwrt](downloads.openwrt.org):   ```/metadata/openwrt.json```
 - [router-tech](routertech.org):  ```/metadata/routertech.json```
 - [supermirco](supermicro.com):  ```/metadata/supermirco.json```
@@ -88,9 +88,19 @@ Protected with Fortify Source: Yes
 
 
 
+### Kernel Analyzer
+
+The kernel analyzer takes ELF format Linux kernel as input to check the Linux kernel version and the existence of kernel attack mitigations. [vmlinux-to-elf](https://github.com/marin-m/vmlinux-to-elf) can be used to transfer raw format Linux kernel to a fully analyzable ELF file.
+
+#### Dependencies:
+
+* [vmlinux-to-elf](https://github.com/marin-m/vmlinux-to-elf)
 
 
 
+#### Usage:
 
+The ```kernel_example``` folder contains a raw format Linux kernel its corresponding recovered ELF format Linux kernel. To check the mitigations, run the example with following:
 
+```bash kernel_analyzer.sh -f kernel_example/elf_kernel```
 
