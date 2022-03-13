@@ -50,3 +50,47 @@ The ```./metadata``` folder contains the meta data of firmware images used in th
 - [ubiquiti](ubnt.com):     ```/metadata/ubiquiti.json```
 - [ublox](u-blox.com):    ```/metadata/ublox.json```
 - [zyxel](zyxel.com):    ```/metadata/zyxel.json```
+
+
+
+
+
+# Analyzer
+
+### ELF Analyzer
+
+The ELF analyzer takes one file as input to check the mitigations adopted by the ELF binary. 
+
+#### Dependencies
+
+* [elftools](https://pypi.org/project/pyelftools/)
+
+* [pwntools](https://docs.pwntools.com/en/stable/)
+
+#### Usage
+
+Run with following command:
+
+```python3 elf_analyzer.py file_path```
+
+The output includes the mitigations adopted by the ELF binary
+
+```c
+File name: /bin/ls
+Arch: amd64-64
+Dynamic linked: Yes
+PIE/PIC: Yes
+Protected with Canary: Yes
+Protected with NX: Yes
+Protected with full RELRO
+Protected with Fortify Source: Yes
+```
+
+
+
+
+
+
+
+
+

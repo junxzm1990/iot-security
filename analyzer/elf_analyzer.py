@@ -1,3 +1,4 @@
+import os
 import argparse
 from elftools.elf.elffile import ELFFile
 import logging
