@@ -5,8 +5,6 @@ import logging
 from elftools.elf.sections import SymbolTableSection
 from pwnlib.elf.elf import ELF
 
-
-
 def get_chk_names(elffile):
     function_names = set()
 
