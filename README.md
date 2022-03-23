@@ -59,13 +59,13 @@ The ```./metadata``` folder contains the meta data of firmware images used in th
 
 ### ELF Analyzer
 
-The ELF analyzer takes one file as input to check the mitigations adopted by the ELF binary. 
+The ELF analyzer takes one file as input to check the mitigations adopted by the ELF binary. We use [Binaryninja](https://binary.ninja/) to disassemble statically-linked binary to verify Stack Canary and Fortify Source. We separate this functionality from ```elf_analyzer.py``` since BinaryNinja is a commercial tool unavailable to general public.
 
 #### Dependencies
 
 * [elftools](https://pypi.org/project/pyelftools/)
-
 * [pwntools](https://docs.pwntools.com/en/stable/)
+* [Binaryninja](https://binary.ninja/) (optional)
 
 #### Usage
 
@@ -88,6 +88,12 @@ Protected with Fortify Source: Yes
 
 
 
+To accurately verify Stack Canary & Fortify Source in statically-linked binary, run following command with Binaryninja correctly installed:
+
+```python3 stc_stack.py file_path```
+
+
+
 ### Kernel Analyzer
 
 The kernel analyzer takes ELF format Linux kernel as input to check the Linux kernel version and the existence of kernel attack mitigations. [vmlinux-to-elf](https://github.com/marin-m/vmlinux-to-elf) can be used to transfer raw format Linux kernel to a fully analyzable ELF file.
@@ -100,7 +106,7 @@ The kernel analyzer takes ELF format Linux kernel as input to check the Linux ke
 
 #### Usage:
 
-The ```kernel_example``` folder contains a raw format Linux kernel with its corresponding recovered ELF format Linux kernel. To check the mitigations, run the example with following:
+The ```kernel_example``` folder contains a raw format Linux kernel its corresponding recovered ELF format Linux kernel. To check the mitigations, run the example with following:
 
 ```bash kernel_analyzer.sh -f kernel_example/elf_kernel```
 
