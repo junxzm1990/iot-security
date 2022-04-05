@@ -110,3 +110,17 @@ The ```kernel_example``` folder contains a raw format Linux kernel its correspon
 
 ```bash kernel_analyzer.sh -f kernel_example/elf_kernel```
 
+
+
+## Citation
+
+If you create a research work that uses our work, please cite our paper:
+
+```
+@article{yu2022building,
+  title={Building Embedded Systems Like It's 1996},
+  author={Yu, Ruotong and Del Nin, Francesca and Zhang, Yuchen and Huang, Shan and Kaliyar, Pallavi and Zakto, Sarah and Conti, Mauro and Portokalidis, Georgios and Xu, Jun},
+  journal={arXiv preprint arXiv:2203.06834},
+  year={2022}
+}
+```
