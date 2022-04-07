@@ -114,7 +114,7 @@ The ```kernel_example``` folder contains a raw format Linux kernel its correspon
 
 ## Citation
 
-If you create a research work that uses our work, please cite our paper:
+If your research find one or several components of this work useful, please cite the following paper:
 
 ```
 @article{yu2022building,
